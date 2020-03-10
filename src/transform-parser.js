@@ -71,7 +71,7 @@ class ParserStream extends stream.Transform {
 
     try {
       this.json = this._parseXMLtoJSON(formattedXML);
-      this.push(JSON.stringify(this.json));
+      this.push(this.json);
     } catch (err) {
       this.emit('error', err);
     }
